@@ -1,8 +1,8 @@
-# ROS wrapper for ORB-SLAM3
+# ROS wrapper for ORB-SLAM3: The Pepper case
 
-A ROS wrapper for [ORB-SLAM3](https://github.com/UZ-SLAMLab/ORB_SLAM3). The main idea is to use the ORB-SLAM3 as a standalone library and interface with it instead of putting everything together. For that, you can check out [this package](https://github.com/thien94/orb_slam_3_ros).
+Adadaptation for [Pepper Robot](https://github.com/uchile-robotics/maqui_bringup) of a ROS wrapper for [ORB-SLAM3](https://github.com/UZ-SLAMLab/ORB_SLAM3). The main idea is to use the ORB-SLAM3 as a standalone library and interface with it instead of putting everything together. For that, you can check out [this package](https://github.com/thien94/orb_slam_3_ros).
 
-Tested with ORB-SLAM3 V1.0, primarily on Ubuntu 20.04.
+Tested with ORB-SLAM3 V1.0, primarily on Ubuntu 18.04.
 
 - **Pros**:
   - Easy to update [ORB-SLAM3](https://github.com/UZ-SLAMLab/ORB_SLAM3#orb-slam3) indepedently.
@@ -40,7 +40,7 @@ chmod +x build.sh
 - Clone the package. Note that it should be a `catkin build` workspace.
 ```
 cd ~/catkin_ws/src/
-git clone https://github.com/thien94/orb_slam3_ros_wrapper.git
+git clone https://github.com/tnacho-23/orb_slam3_ros_wrapper.git
 ```
 
 - Open `CMakeLists.txt` and change the directory that leads to ORB-SLAM3 library at the beginning of the file (default is home folder `~/`)
@@ -57,7 +57,7 @@ set(ORB_SLAM3_DIR
 - Build the package normally.
 ```
 cd ~/catkin_ws/
-catkin build
+catkin_make
 ```
 
 - Next, copy the `ORBvoc.txt` file from `ORB-SLAM3/Vocabulary/` folder to the `config` folder in this package. Alternatively, you can change the `voc_file` param in the launch file to point to the right location.
