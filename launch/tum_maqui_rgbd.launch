@@ -1,8 +1,16 @@
 <launch>
     <node name="orb_slam3_rbgd" pkg="orb_slam3_ros_wrapper" type="orb_slam3_ros_wrapper_rgbd" output="screen">
         <!-- for TUM dataset -->
-        <remap from="camera/rgb/image_raw"                 to="maqui/camera/front_aligned_to_depth/image_raw"/>
-        <remap from="camera/depth_registered/image_raw"    to="maqui/camera/depth/image_raw"/>
+
+        <!-- <remap from="/camera/rgb/image_raw"                 to="/camera/rgb/image_color"/> -->
+        <!-- <remap from="/camera/depth_registered/image_raw"    to="/camera/depth/image"/> -->
+
+        <remap from="/camera/rgb/image_raw"                 to="/maqui/camera/front/image_raw"/>
+        <!-- <remap from="/camera/rgb/image_raw"                 to="/maqui/camera/front_aligned_to_depth/image_raw"/> -->
+        <remap from="/camera/depth_registered/image_raw"    to="/maqui/camera/depth/image_raw"/>
+
+        /maqui/camera/front_aligned_to_depth/image_raw
+
 
         <!-- Parameters for original ORB-SLAM3 -->
         <param name="voc_file"      type="string"   value="$(find orb_slam3_ros_wrapper)/config/ORBvoc.txt" />
