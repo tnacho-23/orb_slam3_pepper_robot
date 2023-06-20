@@ -71,17 +71,36 @@ sudo apt install ros-[DISTRO]-hector-trajectory-server
 
 ## 3. How to run
 
-### EuRoC dataset:
+### Mono: EuRoC dataset
 
-- In one terminal, launch the node:
+- In one terminal, launch the file:
 ```
-roslaunch orb_slam3_ros_wrapper euroc_monoimu.launch
+roslaunch orb_slam3_ros_wrapper euroc_maqui_mono.launch
 ```
-- In another terminal, playback the bag:
+### RGB-D: TUM dataset
+
+- In one terminal, launch the node _image_translator_node_ that creates a new RGB image aligned with the Depth camera:
 ```
-rosbag play MH_01_easy.bag
+roscd orb_slam3_ros_wrapper
+cd src
+python image_translator_node.py
 ```
-Similarly for other sensor types.
+
+- In another terminal, launch the file:
+```
+roslaunch orb_slam3_ros_wrapper tum_maqui_rgbd.launch
+```
+#### TODO (RGBD): 
+
+Make the image translator node work better (the system doesn't recieves images with the aligned images). The launch file is now working with _unalignied_ image topics and crashes when Maqui moves too much (maybe crashes because we are working with unaligned images??), the _aligned_ topics are commented in the launch file.
+
+
+## 4. TODO (general): 
+-Mono system is able to detect the enviroment and publish a point cloud. Now we need to see how to create a Map with this data.
+
+-With the map ready, start navigating??
+
+-FIX RGBD!!!!!!!
 
 # Topics
 The following topics are published by each node:
