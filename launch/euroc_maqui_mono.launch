@@ -20,6 +20,8 @@
 
     <!-- Visualization - RViz-->
     <node name="rviz" pkg="rviz" type="rviz" args="-d $(find orb_slam3_ros_wrapper)/config/orb_slam3_no_imu.rviz" output="screen" />
+
+    <!-- Transforms -->
     <node pkg="tf" type="static_transform_publisher" name="link1_broadcaster" args="0 0 0 0 0 0 CameraTop_frame world 1" />
     <node pkg="tf" type="static_transform_publisher" name="link2_broadcaster" args="0 0 0 0 0 0 CameraTop_frame camera 1" />
 

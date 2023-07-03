@@ -1,0 +1,6 @@
+<launch>
+    <!-- ORB-SLAM3 Maqui Mono-->
+    <include file="$(find orb_slam3_ros_wrapper)/launch/euroc_maqui_mono.launch" />
+    <include file="$(find orb_slam3_ros_wrapper)/launch/pointcloud_to_laser_scan.launch" />
+
+</launch>
