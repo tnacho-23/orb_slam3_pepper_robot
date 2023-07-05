@@ -252,8 +252,6 @@ Visualization Manager:
           Value: false
         base_link:
           Value: false
-        camera:
-          Value: true
         l_gripper:
           Value: false
         l_wrist:
@@ -266,8 +264,6 @@ Visualization Manager:
           Value: false
         torso:
           Value: false
-        world:
-          Value: true
       Marker Scale: 1
       Name: TF
       Show Arrows: true
@@ -365,8 +361,6 @@ Visualization Manager:
                   CameraTop_frame:
                     CameraTop_optical_frame:
                       {}
-                    camera:
-                      {}
                   HeadTouchFront_frame:
                     {}
                   HeadTouchMiddle_frame:
@@ -407,8 +401,6 @@ Visualization Manager:
                           {}
               Tablet_frame:
                 {}
-          world:
-            {}
       Update Interval: 0
       Value: true
     - Alpha: 1
@@ -880,7 +872,7 @@ Visualization Manager:
   Global Options:
     Background Color: 46; 52; 54
     Default Light: true
-    Fixed Frame: world
+    Fixed Frame: odom
     Frame Rate: 30
   Name: root
   Tools:
@@ -919,10 +911,10 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.32979708909988403
+      Pitch: 0.28479716181755066
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 1.526366114616394
+      Yaw: 1.8813666105270386
     Saved: ~
 Window Geometry:
   Displays:
