@@ -50,7 +50,7 @@ roslaunch orb_slam3_ros orb_mapping.launch
  Now everytime you want to load a map, you must load the pgm generated with gmapping and the orbslam 3D map.
 
 
- ##Realsense things
+ ## Realsense things
  (Tengo el cerebro frito y no voy a pensar en inglés, queda pendiente su traducción)
 
  1. Launch Realsense d435i node
