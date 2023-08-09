@@ -48,3 +48,19 @@ roslaunch orb_slam3_ros orb_mapping.launch
 ```
 
  Now everytime you want to load a map, you must load the pgm generated with gmapping and the orbslam 3D map.
+
+
+ ##Realsense things
+ (Tengo el cerebro frito y no voy a pensar en inglés, queda pendiente su traducción)
+
+ 1. Launch Realsense d435i node
+```
+roslaunch orb_slam3_ros realsense_d435i.launch
+```
+ 2. Launch TUM RGB-D for Realsense d435i
+```
+roslaunch orb_slam3_ros tum_rgbd_rs.launch
+```
+ 3. Enjoy! Pangolin is active by default.
+ 4. You can save the maps in the same way as mentioned above.
+ 
