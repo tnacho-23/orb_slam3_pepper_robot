@@ -2,9 +2,9 @@
 <!-- point cloud to laser scan node for pepper robot and orbslam3_ros_wrapper-->
     <node pkg="pointcloud_to_laserscan" type="pointcloud_to_laserscan_node" name="pointcloud_to_laserscan">
         <!-- El remap que se suscribe a all_points debería crear el mapa de una, con todos los puntos del mapa, por este motivos, conviene tirar esto + gmapping al terminar de mapear -->
-        <remap from = "cloud_in" to = "/orb_slam3/all_points"/> 
+        <!-- <remap from = "cloud_in" to = "/orb_slam3/all_points"/>  -->
         <!-- Si lo anterior no funciona, toca mapear con los puntos de manera normal -->
-        <!-- <remap from = "cloud_in" to = "/orb_slam3/tracked_points"/>  -->
+        <remap from = "cloud_in" to = "/orb_slam3/tracked_points"/> 
         <remap from = "scan" to = "/orb_slam3/laser_scan"/>
 
         <rosparam>
