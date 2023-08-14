@@ -1,6 +1,6 @@
 %YAML:1.0
 
-System.LoadAtlasFromFile: "rs_lab"
+#System.LoadAtlasFromFile: "rs_lab"
 
 #--------------------------------------------------------------------------------------------
 # Camera Parameters. Adjust them!
@@ -35,6 +35,11 @@ Camera.RGB: 1
 # Close/Far threshold. Baseline times.
 Stereo.ThDepth: 40.0
 Stereo.b: 0.0745
+
+# RPY angles (in rad) the world frame will be rotated by
+WorldRPY.roll: 1.57079632679
+WorldRPY.pitch: 0.0
+WorldRPY.yaw: 1.57079632679
 
 # Depth map values factor
 RGBD.DepthMapFactor: 1000.0
